@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400&display=swap%27%29%3B');
+
  * {
+    font-family: 'Poppins',sans-serif;
     margin: 0 ;
     padding: 0 ;
     box-sizing: border-box;
@@ -6,19 +9,20 @@
  }
 
  .game-board {
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid #41da1a;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#72bbcb,#ffffff);
  }
 
  .pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1s infinite linear;
+    animation: pipe-animation 0.8s infinite linear;
  }
  .mario {
     width: 150px;
@@ -29,6 +33,27 @@
     
     animation: jump 500ms ease-out;
  }
+.clouds {
+    position: absolute;
+    width: 350px;
+    animation: clouds 15s infinite linear;
+    justify-content: center;
+}
+.score {
+    
+    position: absolute;
+    background: white;
+    width: 60px; 
+    border-radius: 10px;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;   
+  
+}
+
  @keyframes pipe-animation {
     from {
         right: -80px;
@@ -62,5 +87,14 @@
     
     /*Fim*/
 
+
+ }
+ @keyframes clouds {
+    from {
+        right: -330px;
+    }
+    to {
+        right: 100%;
+    }
 
  }
